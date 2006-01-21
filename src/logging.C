@@ -449,4 +449,12 @@ update_lastlog (const char *fname, const char *pty, const char *host)
 #endif				/* LASTLOG_SUPPORT */
 /* ------------------------------------------------------------------------- */
 
-#endif				/* UTMP_SUPPORT */
+#else
+
+void
+ptytty_unix::login (int cmd_pid, bool login_shell, const char *hostname)
+{
+}
+
+#endif
+
